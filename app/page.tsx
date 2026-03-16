@@ -10,19 +10,22 @@ export default function Home() {
         id="inicio"
         className="h-dvh w-full flex items-center justify-center"
       >
-        <main className="h-3/4 w-4/5 grid grid-cols-1 bg-red-500 md:grid-cols-2 gap-2 ">
-          <div className="bg-blue-500 flex flex-col items-center justify-center">
-            <h1 className="font-great-vibes text-4xl">Cantinho da Tia Nelci</h1>
-            <p className="font-inter text-base font-bold">costura criativa +</p>
+        <main className=" h-3/4 w-4/5 grid grid-cols-1  md:grid-cols-2 gap-2 ">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-white  font-great-vibes text-4xl md:text-7xl">
+              Cantinho da Tia Nelci
+            </h1>
+            <p className="text-base font-bold text-white">costura criativa +</p>
+          </div>
+          <div className="flex items-center justify-center md:row-span-2">
+            <Image
+              src={Sewing}
+              alt="nelcimara costurando"
+              className="rounded-2xl object-cover"
+            />
           </div>
 
-          <Image
-            src={Sewing}
-            alt="nelcimara costurando"
-            className="rounded-2xl"
-          />
-
-          <p className="overflow-y-auto text-base">
+          <p className="overflow-y-auto flex items-center justify-center text-base text-white">
             Olá, me chamo Nelcimara Gross. Sou artesã especializada em costura
             criativa, trabalhando com a criação e personalização de peças feitas
             sob medida. Cada projeto é desenvolvido com atenção aos detalhes,
