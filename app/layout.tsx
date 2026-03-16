@@ -61,7 +61,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} ${greatVibes.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${greatVibes.variable} antialiased font-inter`}
+      >
         {children}
       </body>
     </html>
