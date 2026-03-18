@@ -20,8 +20,8 @@ export default function WhatsappLink() {
        bg-linear-to-r 
        from-[#71071d] 
        to-[#D70D37] 
-       cursor-pointer 
-       shadow-2xl 
+       cursor-pointer
+              shadow-lg
        rounded-2xl 
        transition
        duration-300
