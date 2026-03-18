@@ -25,7 +25,7 @@ export default function Home() {
             <Image
               src={Sewing}
               alt="nelcimara costurando"
-              className="rounded-2xl"
+              className="rounded-2xl transition duration-300 hover:scale-105"
             />
           </div>
           <div className="flex flex-col items-center justify-between">
