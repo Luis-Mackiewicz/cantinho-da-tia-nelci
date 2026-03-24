@@ -3,6 +3,8 @@ import NelcimaraImage from "@/public/nelcimara.png";
 import Sewing from "@/public/sewing.png";
 import Image from "next/image";
 import WhatsappLink from "@/components/button";
+import Card from "@/components/card";
+import { Car } from "lucide-react";
 
 export default function Home() {
   return (
@@ -12,7 +14,7 @@ export default function Home() {
         id="inicio"
         className="min-h-dvh w-full flex items-center justify-center"
       >
-        <main className="h-3/4 w-4/5 grid grid-cols-1 lg:grid-cols-2 md:gap-8">
+        <main className="h-3/4 w-4/5 grid grid-cols-1 lg:grid-cols-2 gap-y-2 md:gap-8">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-white font-great-vibes text-3xl lg:text-5xl">
               Cantinho da Tia Nelci
@@ -28,7 +30,7 @@ export default function Home() {
               className="rounded-2xl transition duration-300 hover:scale-105"
             />
           </div>
-          <div className="flex flex-col items-center justify-between">
+          <div className="flex flex-col items-center justify-between gap-2">
             <p className="text-base text-center text-white lg:hidden">
               Olá, me chamo Nelcimara Gross. Artesã especializada em costura
               criativa, trabalhando com a criação e personalização de peças
@@ -53,7 +55,7 @@ export default function Home() {
         id="sobre"
         className="min-h-dvh w-full flex items-center justify-center"
       >
-        <div className="h-3/4 w-4/5 grid grid-cols-1 lg:grid-cols-2">
+        <div className="h-3/4 w-4/5 grid grid-cols-1 gap-2 lg:grid-cols-2">
           <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl lg:order-2">
             Sobre
           </h2>
@@ -63,7 +65,7 @@ export default function Home() {
               src={NelcimaraImage}
               alt="nelcimara image"
               width={500}
-              className="rounded-2xl object-cover"
+              className="rounded-2xl object-cover transition duration-300 hover:scale-105"
             />
           </div>
 
@@ -93,9 +95,31 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="servicos" className="h-dvh w-full"></section>
-      <section id="galeria" className="h-dvh w-full"></section>
-      <section id="contato" className="h-dvh w-full"></section>
+      <section
+        id="servicos"
+        className="min-h-dvh w-full flex flex-col gap-y-4 justify-center items-center"
+      >
+        <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl">
+          Serviços
+        </h2>
+        <Card />
+      </section>
+
+      <section id="galeria" className="min-h-dvh w-full">
+        <div className="h-3/4 w-4/5 bg-sky-500">
+          <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl">
+            Serviços
+          </h2>
+        </div>
+      </section>
+
+      <section id="contato" className="min-h-dvh w-full">
+        <div className="h-3/4 w-4/5 bg-sky-500">
+          <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl">
+            Serviços
+          </h2>
+        </div>
+      </section>
     </>
   );
 }
