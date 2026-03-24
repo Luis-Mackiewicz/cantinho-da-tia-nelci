@@ -10,9 +10,9 @@ export default function Home() {
       <Header />
       <section
         id="inicio"
-        className="h-dvh w-full flex items-center justify-center"
+        className="min-h-dvh w-full flex items-center justify-center"
       >
-        <main className=" h-3/4 w-4/5 grid grid-cols-1 lg:grid-cols-2 md:gap-8 ">
+        <main className="h-3/4 w-4/5 grid grid-cols-1 lg:grid-cols-2 md:gap-8">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-white font-great-vibes text-3xl lg:text-5xl">
               Cantinho da Tia Nelci
@@ -51,10 +51,14 @@ export default function Home() {
       </section>
       <section
         id="sobre"
-        className="h-dvh w-full flex items-center justify-center"
+        className="min-h-dvh w-full flex items-center justify-center"
       >
-        <div className="h-3/4 w-4/5 grid-cols-1 md:grid-cols-2">
-          <div className="flex justify-center items-center">
+        <div className="h-3/4 w-4/5 grid grid-cols-1 lg:grid-cols-2">
+          <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl lg:order-2">
+            Sobre
+          </h2>
+
+          <div className="flex justify-center items-center lg:row-span-2 lg:order-1">
             <Image
               src={NelcimaraImage}
               alt="nelcimara image"
@@ -63,11 +67,16 @@ export default function Home() {
             />
           </div>
 
-          <div>
-            <h2 className="font-great-vibes text-white text-4xl md:text-7xl">
-              Sobre
-            </h2>
-            <p className="text-white">
+          <div className="flex items-center justify-center lg:order-3">
+            <p className="text-white text-base lg:hidden">
+              Sou Nelcimara Gross e transformo tecidos em peças únicas desde
+              2012. O que começou como paixão tornou-se um trabalho dedicado a
+              unir criatividade, qualidade e funcionalidade. Cada detalhe é
+              pensado para entregar o valor do feito à mão em produtos
+              personalizados e cheios de carinho.
+            </p>
+
+            <p className="hidden text-white lg:flex">
               Meu nome é Nelcimara Gross e iniciei na costura criativa em 2012.
               Foi nesse período que descobri minha paixão por criar peças
               artesanais, transformando tecidos, ideias e inspirações em
