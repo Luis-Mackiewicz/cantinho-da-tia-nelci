@@ -1,6 +1,15 @@
 export default function Card() {
   return (
-    <div className="w-4/5 rounded-xl bg-foreground text-white p-2 lg:w-2/5 lg:p-16">
+    <div
+      className="w-4/5 
+      rounded-xl  
+      bg-linear-to-br 
+       from-[#71071d] 
+       to-[#D70D37] 
+        text-white p-2 
+        lg:w-2/5 
+        lg:p-16"
+    >
       <dl className="p-4">
         <dt className="font-bold text-xl">costura criativa</dt>
         <dd className="text-base">
