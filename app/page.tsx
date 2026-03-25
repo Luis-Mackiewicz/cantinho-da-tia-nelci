@@ -1,10 +1,10 @@
+import WhatsappLink from "@/components/button";
+import Card from "@/components/card";
 import Header from "@/components/header";
 import NelcimaraImage from "@/public/nelcimara.png";
 import Sewing from "@/public/sewing.png";
 import Image from "next/image";
-import WhatsappLink from "@/components/button";
-import Card from "@/components/card";
-import { Car } from "lucide-react";
+import ClientEvicence from "@/public/clientEvidence.png";
 
 export default function Home() {
   return (
@@ -105,19 +105,42 @@ export default function Home() {
         <Card />
       </section>
 
-      <section id="galeria" className="min-h-dvh w-full">
-        <div className="h-3/4 w-4/5 bg-sky-500">
-          <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl">
-            Serviços
+      <section
+        id="galeria"
+        className="min-h-dvh w-full flex flex-col items-center justify-center"
+      >
+        <div className="h-3/4 w-4/5 flex flex-col items-center justify-center">
+          <h2 className="text-white font-great-vibes text-3xl lg:text-5xl">
+            Galeria
           </h2>
+          <p className="text-white/70">Em breve!</p>
         </div>
       </section>
 
-      <section id="contato" className="min-h-dvh w-full">
-        <div className="h-3/4 w-4/5 bg-sky-500">
-          <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl">
+      <section
+        id="contato"
+        className="min-h-dvh w-full flex items-center justify-center bg-foreground"
+      >
+        <div className="h-3/4 w-4/5 grid grid-cols-1 gap-y-8 text-white lg:grid-cols-2 lg:gap-y-40">
+          <h2 className="flex items-center justify-center text-white font-great-vibes text-3xl lg:text-5xl lg:col-span-2 lg:order-1">
             Serviços
           </h2>
+
+          <div className="flex justify-center items-center lg:order-3">
+            <Image
+              src={ClientEvicence}
+              alt="nelcimara image"
+              width={500}
+              className="rounded-2xl object-cover transition duration-300"
+            />
+          </div>
+
+          <div className="flex flex-col items-center justify-between gap-y-2 lg:order-2">
+            <p className="text-center font-bold text-base lg:text-3xl">
+              Faça já a sua encomenda!
+            </p>
+            <WhatsappLink variant="solid" />
+          </div>
         </div>
       </section>
     </>
