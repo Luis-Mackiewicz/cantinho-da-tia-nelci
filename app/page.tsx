@@ -119,7 +119,9 @@ export default function Home() {
       >
         <div className="w-full max-w-5xl flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-3">
-            <h2 className="font-great-vibes text-5xl lg:text-6xl">Galeria</h2>
+            <h2 className="font-great-vibes text-white text-5xl lg:text-6xl">
+              Galeria
+            </h2>
           </div>
 
           <Carousel opts={{ align: "center", loop: true }} className="w-full">
