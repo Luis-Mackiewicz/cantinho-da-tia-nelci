@@ -1,10 +1,18 @@
-import WhatsappLink from "@/components/button";
 import Card from "@/components/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/carousel/carousel";
 import Header from "@/components/header";
+import WhatsappLink from "@/components/whatsappLink";
+import ClientEvicence from "@/public/clientEvidence.png";
 import NelcimaraImage from "@/public/nelcimara.png";
 import Sewing from "@/public/sewing.png";
 import Image from "next/image";
-import ClientEvicence from "@/public/clientEvidence.png";
+import { carouselItems } from "@/components/carousel/listOfItems";
 
 export default function Home() {
   return (
@@ -109,14 +117,40 @@ export default function Home() {
         id="galeria"
         className="min-h-dvh w-full flex flex-col items-center justify-center"
       >
-        <div className="h-3/4 w-4/5 flex flex-col items-center justify-center">
-          <h2 className="text-white font-great-vibes text-3xl lg:text-5xl">
-            Galeria
-          </h2>
-          <p className="text-white/70">Em breve!</p>
+        <div className="w-full max-w-5xl flex flex-col items-center gap-12">
+          <div className="flex flex-col items-center gap-3">
+            <h2 className="font-great-vibes text-5xl lg:text-6xl">Galeria</h2>
+          </div>
+
+          <Carousel opts={{ align: "center", loop: true }} className="w-full">
+            <CarouselContent>
+              {carouselItems.map((item) => (
+                <CarouselItem
+                  key={item.id}
+                  className="basis-full sm:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="group overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div className="aspect-square overflow-hidden">
+                      <Image
+                        src={item.src}
+                        alt={`Produto ${item.id}`}
+                        width={500}
+                        height={500}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          </Carousel>
         </div>
       </section>
-
       <section
         id="contato"
         className="min-h-dvh w-full flex items-center justify-center bg-foreground"

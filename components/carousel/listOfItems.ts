@@ -1,6 +1,6 @@
 const carouselImages = [
   "/carouselImages/1bolsa_branca.png",
-  "/carouselImages/2bolsa_verde.pngS",
+  "/carouselImages/2bolsa_verde.png",
   "/carouselImages/3chaveiro.png",
   "/carouselImages/4estojo_agataq.png",
   "/carouselImages/5estojo_airton.png",
@@ -40,3 +40,8 @@ const carouselImages = [
   "/carouselImages/39toalha_stich.png",
   "/carouselImages/40toalha_vicente.png",
 ];
+
+export const carouselItems = carouselImages.map((src, i) => ({
+  id: i + 1,
+  src,
+}));
